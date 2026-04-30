@@ -16,10 +16,10 @@ They consist of:
 
 ### [Processed results](./evaluation_results/processed_results)
 These are some further processed results all based on the raw results. Because we are most interested in the tasks where all models produced vulnerable code I mainly focused on these cases in the following.
-- `overall_summary.txt` summary of all benchmarks how many models failed a task. Lists the prompts and found CWEs of the tasks where all models failed
+- `overall_summary.txt` Summary of all benchmarks how many models failed a task. Lists the prompts and found CWEs of the tasks where all models failed
 - `<benchmark>_summary.txt` Overview of testcases and number of failed models (part of `overall_summary.txt`)
 - `cwe_summary.txt` Total number of CWEs from tasks where all models failed
 - `cwe_dependencies.csv` Analysis of co-occurring CWEs
-- `feedback_results.csv` I fed back the found vulnerabilities back to the models and told them to fix their code and these are the results
-- `evaluated_feedback.txt` A comparison of the detected CWEs before and after I fed back the scanners output to the models
+- `feedback_results.csv` I fed back the found vulnerabilities to the models and told them to fix their code and these are the results
+- `evaluated_feedback.txt` A comparison of the detected CWEs before and after I fed back the scanner output to the models
 - `distribution_results.txt` A first attempt to find patterns and group all individual cases
