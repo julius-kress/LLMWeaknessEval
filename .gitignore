@@ -1,0 +1,20 @@
+# IDE
+/venv/
+/.venv/
+
+
+# Log files
+/benchmarks/CodeLMSec/logs/
+/benchmarks/CodeLMSec/results_json/
+/benchmarks/LLMSecEval/logs/
+/benchmarks/LLMSecEval/results_json/
+/benchmarks/SecurityEval/logs/
+/benchmarks/SecurityEval/results_json/
+
+# Ignore all result files created
+/evaluation_results/
+
+
+# Other
+.~lock*
+benchmarks/__pychache__/

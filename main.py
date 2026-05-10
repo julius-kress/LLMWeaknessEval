@@ -1,0 +1,216 @@
+import os
+import csv
+import re
+
+from benchmarks.BenchmarkRunner import BenchmarkRunner
+from benchmarks.CodeLMSec.CodeLMSec import CodeLMSec
+from benchmarks.LLMSecEval.LLMSecEval import LLMSecEval
+from benchmarks.SecurityEval.SecurityEval import SecurityEval
+from enum import Enum
+
+class Models(Enum):
+    """
+    Models that should be used for generating the program code.
+    """
+    QWEN = "qwen/qwen3-coder-30b-a3b-instruct"
+    DEEPSEEK = "deepseek/deepseek-v3.2"
+    GPT = "openai/gpt-4o-mini"
+
+class Main:
+    def __init__(self):
+        # Setting up directories
+        self.result_folder = os.path.abspath(os.path.join(__file__, "..", "evaluation_results"))
+        print(f"Results folder: {self.result_folder}")
+        os.makedirs(self.result_folder, exist_ok=True)
+
+        self.AMOUNT_OF_MODELS = len(Models)
+        self.OVERALL_SUMMARY = os.path.join(self.result_folder, "overall_summary.txt")
+
+        # Clear overall summary
+        with open(self.OVERALL_SUMMARY, mode="w", encoding="utf-8") as f:
+            f.write("Overall summary:\n")
+
+        self.security_eval = SecurityEval()
+        self.llm_sec_eval = LLMSecEval()
+        self.code_lm_sec = CodeLMSec()
+
+
+    def main(self) -> None:
+        """
+        Run different benchmarks, generate code for each task for each model and check for vulnerabilities.
+        """
+        print("Starting LLM Weakness Evaluation...")
+
+        # Generate program code for each benchmark and evaluate it with the vulnerability scanners.
+        """
+        self.generate_and_evaluate(self.security_eval)
+        self.generate_and_evaluate(self.llm_sec_eval)
+        self.generate_and_evaluate(self.code_lm_sec)
+        """
+
+        # Further process the results
+        self.process_results(self.security_eval)
+        self.process_results(self.llm_sec_eval)
+        self.process_results(self.code_lm_sec)
+
+
+    def generate_and_evaluate(self, benchmark: BenchmarkRunner) -> None:
+        """
+        Generate code for each benchmark and model; evaluate it after.
+        :param benchmark: The benchmark which should be run.
+        """
+        benchmark.generate_code(Models.QWEN.value)
+        benchmark.generate_code(Models.DEEPSEEK.value)
+        benchmark.generate_code(Models.GPT.value)
+
+        benchmark.evaluate_results()
+
+    def process_results(self, benchmark: BenchmarkRunner) -> None:
+        """
+        Process the results (generated code / found vulnerabilities), write overall summary.
+        :param benchmark: The benchmark of which the results should be processed
+        """
+        print(f"Evaluating results for {benchmark.get_benchmark_root()}")
+
+        csv_path = benchmark.RESULT_FILE
+        print(csv_path)
+
+
+        with open(csv_path, mode="r", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+
+            counter_test_case = 0
+            counter_vuln_test_case = 0
+            data = []
+            datapoint = []
+
+            for row in reader:
+                datapoint.append(row)
+                bandit_eval = row["bandit_evaluation"]
+                codeql_eval = row["codeql_evaluation"]
+
+                if not (bandit_eval == "No issues found." and codeql_eval == "NO_CWE"):
+                    counter_vuln_test_case += 1
+
+                counter_test_case += 1
+
+                if counter_test_case >= self.AMOUNT_OF_MODELS:
+                    #datapoint.append(counter_vuln_test_case)
+                    data.append((tuple(datapoint), counter_vuln_test_case))
+                    datapoint = []
+
+                    counter_test_case = 0
+                    counter_vuln_test_case = 0
+
+                prompt_id = row['id']
+
+        print("### data length = " + str(len(data)))
+
+        # Sort the results
+        sorted_data = sorted(data, key=lambda x: x[1], reverse=True)
+
+        # Write summaries
+        self.write_summary_txt(benchmark, sorted_data)
+
+        with open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as f:
+            f.write(f"Benchmark: {os.path.basename(benchmark.get_benchmark_root())}\n")
+
+        # Append content from _summary.txt to OVERALL_SUMMARY
+        txt_result_path = os.path.join(self.result_folder, os.path.basename(benchmark.get_benchmark_root()) + "_summary.txt")
+        with open(txt_result_path, "r", encoding="utf-8") as src, open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as dst:
+            dst.write(src.read())
+            dst.write(f"\nTestcases where {self.AMOUNT_OF_MODELS}/{self.AMOUNT_OF_MODELS} produced vulnerable code:")
+
+        self.write_result_csv(benchmark, sorted_data)
+
+        with open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as f:
+            f.write("\n\n\n")
+
+    def write_result_csv(self, benchmark: BenchmarkRunner, sorted_data) -> None:
+        """
+        For each benchmark, write all results to a csv-file and some more specific to the overall summary (e.g. cases where all models failed).
+        :param benchmark: The benchmark which was processed
+        :param sorted_data: All the data which was collected and should be written to the results file now
+        """
+        result_path = os.path.join(self.result_folder, os.path.basename(benchmark.get_benchmark_root()) + "_result.csv")
+
+        with open(result_path, "w", encoding="utf-8") as result:
+            writer = csv.DictWriter(result, fieldnames=["id", "prompt", "generated_code", "model", "bandit_evaluation", "codeql_evaluation"])
+            writer.writeheader()
+            print("### sorted_data length = " + str(len(sorted_data)))
+
+            for csv_row_list, vulnerable in sorted_data:
+                add_to_overall_summary = False
+                # Do checks to see the cases where all models failed
+                if vulnerable >= self.AMOUNT_OF_MODELS:
+                    add_to_overall_summary = True
+                    with open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as f:
+                        tmp = csv_row_list[0]
+                        f.write(f"\n")
+                        f.write("=" * (len(tmp['id']) + 4) + "\n")
+                        f.write(f"| {tmp['id']} |\n")
+                        f.write("=" * (len(tmp['id']) + 4) + "\n")
+                        f.write(f"Prompt: {tmp['prompt']}\n")
+                        f.write("Found vulnerabilities across models:\n")
+
+                for test_case in csv_row_list:
+                    #print(test_case)
+                    writer.writerow(test_case)
+                    tmp = test_case['id']
+                    if add_to_overall_summary:
+                        with open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as f:
+                            bandit_eval = test_case["bandit_evaluation"]
+                            codeql_eval = test_case["codeql_evaluation"]
+                            if bandit_eval != "No issues found.":
+                                pattern = re.compile(
+                                    r"] (.*?)\n.*?CWE: (.*?)\n",
+                                    re.DOTALL
+                                )
+
+                                for match in pattern.finditer(bandit_eval):
+                                    description = match.group(1)
+                                    cwe = match.group(2)
+                                    f.write(f"-> {cwe} {description}\n")
+
+                            if codeql_eval != "NO_CWE":
+                                for line in codeql_eval.splitlines():
+                                    f.write(f"-> {line}\n")
+
+                add_to_overall_summary = False
+
+            with open(self.OVERALL_SUMMARY, mode="a", encoding="utf-8") as f:
+                f.write("\n\n")
+
+
+    def write_summary_txt(self, benchmark: BenchmarkRunner, sorted_data) -> None:
+        """
+        For each benchmark write a summary.txt file where data on how many models failed to produce secure program code
+        for each task
+        :param benchmark: The benchmark which was processed
+        :param sorted_data: The data which was collected
+        """
+        txt_result_path = os.path.join(self.result_folder, os.path.basename(benchmark.get_benchmark_root()) + "_summary.txt")
+
+        with open(txt_result_path, "w", encoding="utf-8") as f:
+            f.writelines(f"Total testcases: {len(sorted_data)}\n")
+            for i in range(self.AMOUNT_OF_MODELS + 1):
+                amount = 0
+                for csv_row, vulnerable in sorted_data:
+                    if vulnerable == i:
+                        amount += 1
+
+                f.writelines(f"Testcases where {i}/{self.AMOUNT_OF_MODELS} models generated vulnerable code: {amount}\n")
+
+            f.writelines("\nResults for unique testcases:\n")
+
+            idx = 1
+            for csv_row_list, vulnerable in sorted_data:
+                first_row = csv_row_list[0]
+                prompt_id = first_row['id']
+                #print(prompt_id)
+
+                f.writelines(f"{idx}: [{prompt_id}] \t{vulnerable}/{self.AMOUNT_OF_MODELS} vulnerable\n")
+                idx += 1
+
+if __name__ == '__main__':
+    Main().main()
