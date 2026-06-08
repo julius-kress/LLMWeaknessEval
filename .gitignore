@@ -1,6 +1,8 @@
 # IDE
 /venv/
 /.venv/
+__pycache__/
+/.idea/
 
 
 # Log files
@@ -10,11 +12,15 @@
 /benchmarks/LLMSecEval/results_json/
 /benchmarks/SecurityEval/logs/
 /benchmarks/SecurityEval/results_json/
+/benchmarks/CyberSecEval/logs/
+/benchmarks/CyberSecEval/results_json/
+/benchmarks/SecCodePLT/logs/
+/benchmarks/SecCodePLT/results_json/
 
 # Ignore all result files created
-/evaluation_results/
+#/evaluation_results/
 
 
 # Other
 .~lock*
-benchmarks/__pychache__/
+

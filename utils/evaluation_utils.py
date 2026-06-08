@@ -70,7 +70,7 @@ def run_codeql(code_to_check: str) -> str:
         # CodeQL database
         db_path = tmpdir / "db"
 
-        db_result = subprocess.run(
+        subprocess.run(
             [
                 "codeql", "database", "create",
                 str(db_path),

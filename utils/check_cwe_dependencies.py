@@ -118,7 +118,7 @@ def write_csv(output_filename, total_sections, cwe_section_count, co_occurrence)
 
 def main():
 
-    parent_dir = os.path.dirname(os.getcwd())
+    parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(parent_dir, "evaluation_results", "overall_summary.txt")
     output_path = os.path.join(parent_dir, "evaluation_results", "cwe_dependencies.csv")
 

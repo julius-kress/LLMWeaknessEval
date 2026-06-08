@@ -1,22 +1,22 @@
 Explanation of Weakness Classes:
-    EXECUTION_OF_UNTRUSTED_INPUT:
-        The model allows possible attacker-controlled input data be turned into executable behavior
-        -> covers Code / Command / SQL Injection, arbitrary code evaluation
-    UNSAFE_PARSING_FILE_PROCESSING:
-        Handling of archives, XML or system paths without safely constraining
-        -> covers Unsafe deserialization, Path traversal, tar/archives, Insecure temporary files, XXE
-    WEB_SANITIZATION_FAILURE:
-        Model accepts request data, redirects it or uses it in responses without proper encoding or validation
-        -> covers Open Redirect, Reflected XSS, improper input validation
-    MISMANAGEMENT_SECRETS_CRYPTOGRAPHY:
-        About insecure protection of sensitive data or weak security primitives in general
-        -> covers Weak cryptographic hashing, Hard-coded credentials
-    UNSAFE_DEFAULT_CONFIGURATION:
-        Leak of stack traces / filepaths / config data because of the configuration the model did
-        -> covers Information Exposure, debug mode, stack trace exposure
-    OTHER:
-        Additional weaknesses that were not automatically sorted into the classes above.
-    
+EXECUTION_OF_UNTRUSTED_INPUT:
+    The model allows possible attacker-controlled input data be turned into executable behavior
+    -> covers Code / Command / SQL Injection, arbitrary code evaluation
+UNSAFE_PARSING_FILE_PROCESSING:
+    Handling of archives, XML or system paths without safely constraining
+    -> covers Unsafe deserialization, Path traversal, tar/archives, Insecure temporary files, XXE
+WEB_SANITIZATION_FAILURE:
+    Model accepts request data, redirects it or uses it in responses without proper encoding or validation
+    -> covers Open Redirect, Reflected XSS, improper input validation
+MISMANAGEMENT_SECRETS_CRYPTOGRAPHY:
+    About insecure protection of sensitive data or weak security primitives in general
+    -> covers Weak cryptographic hashing, Hard-coded credentials
+UNSAFE_DEFAULT_CONFIGURATION:
+    Leak of stack traces / filepaths / config data because of the configuration the model did
+    -> covers Information Exposure, debug mode, stack trace exposure
+OTHER:
+    Additional weaknesses that were not automatically sorted into the classes above.
+
 ---------------------------------------------
 Benchmark: CodeLMSec
 Total testcases: 200
@@ -91,7 +91,7 @@ deepseek/deepseek-v3.2
   UNSAFE_PARSING_FILE_PROCESSING: 1
   WEB_SANITIZATION_FAILURE: 2
   MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 2
-  OTHER: 1
+  UNSAFE_DEFAULT_CONFIGURATION: 1
 
 
 openai/gpt-4o-mini
@@ -99,8 +99,7 @@ openai/gpt-4o-mini
   UNSAFE_PARSING_FILE_PROCESSING: 1
   WEB_SANITIZATION_FAILURE: 1
   MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 2
-  UNSAFE_DEFAULT_CONFIGURATION: 1
-  OTHER: 1
+  UNSAFE_DEFAULT_CONFIGURATION: 2
 
 
 qwen/qwen3-coder-30b-a3b-instruct
@@ -108,7 +107,65 @@ qwen/qwen3-coder-30b-a3b-instruct
   UNSAFE_PARSING_FILE_PROCESSING: 1
   WEB_SANITIZATION_FAILURE: 1
   MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 2
-  UNSAFE_DEFAULT_CONFIGURATION: 1
+  UNSAFE_DEFAULT_CONFIGURATION: 2
+
+
+---------------------------------------------
+Benchmark: CyberSecEval
+Total testcases: 282
+Cases where all models produced vulnerable code: 141
+Weakness Classes for models (some cases may provoke more than one single vulnerability class):
+deepseek/deepseek-v3.2
+  EXECUTION_OF_UNTRUSTED_INPUT: 68
+  UNSAFE_PARSING_FILE_PROCESSING: 23
+  WEB_SANITIZATION_FAILURE: 2
+  MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 38
+  UNSAFE_DEFAULT_CONFIGURATION: 28
   OTHER: 1
+
+
+openai/gpt-4o-mini
+  EXECUTION_OF_UNTRUSTED_INPUT: 67
+  UNSAFE_PARSING_FILE_PROCESSING: 15
+  WEB_SANITIZATION_FAILURE: 3
+  MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 34
+  UNSAFE_DEFAULT_CONFIGURATION: 33
+  OTHER: 1
+
+
+qwen/qwen3-coder-30b-a3b-instruct
+  EXECUTION_OF_UNTRUSTED_INPUT: 67
+  UNSAFE_PARSING_FILE_PROCESSING: 23
+  WEB_SANITIZATION_FAILURE: 2
+  MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 37
+  UNSAFE_DEFAULT_CONFIGURATION: 30
+  OTHER: 3
+
+
+---------------------------------------------
+Benchmark: SecCodePLT
+Total testcases: 1345
+Cases where all models produced vulnerable code: 114
+Weakness Classes for models (some cases may provoke more than one single vulnerability class):
+deepseek/deepseek-v3.2
+  EXECUTION_OF_UNTRUSTED_INPUT: 64
+  UNSAFE_PARSING_FILE_PROCESSING: 4
+  WEB_SANITIZATION_FAILURE: 32
+  MISMANAGEMENT_SECRETS_CRYPTOGRAPHY: 5
+  UNSAFE_DEFAULT_CONFIGURATION: 4
+  OTHER: 15
+
+
+openai/gpt-4o-mini
+  EXECUTION_OF_UNTRUSTED_INPUT: 66
+  WEB_SANITIZATION_FAILURE: 32
+  OTHER: 16
+
+
+qwen/qwen3-coder-30b-a3b-instruct
+  EXECUTION_OF_UNTRUSTED_INPUT: 66
+  WEB_SANITIZATION_FAILURE: 32
+  UNSAFE_DEFAULT_CONFIGURATION: 2
+  OTHER: 16
 
 

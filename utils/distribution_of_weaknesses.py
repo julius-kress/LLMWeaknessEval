@@ -7,6 +7,7 @@ import pandas as pd
 
 from utils.evaluation_utils import get_cwe_bandit_output, get_cwe_codeql_output
 
+
 class WeaknessClass(Enum):
     NO_WEAKNESS = 0
     EXECUTION_OF_UNTRUSTED_INPUT = 1
@@ -68,9 +69,9 @@ def _check_weakness_class(list_of_cwes: str) -> list[WeaknessClass]:
                     result_set.add(WeaknessClass.UNSAFE_PARSING_FILE_PROCESSING)
                 case "20" | "79" | "116" | "601":
                     result_set.add(WeaknessClass.WEB_SANITIZATION_FAILURE)
-                case "259" | "327" | "328" | "916":
+                case "259" | "327" | "328" | "330" | "916":
                     result_set.add(WeaknessClass.MISMANAGEMENT_SECRETS_CRYPTOGRAPHY)
-                case "88" | "209" | "215" | "489" | "497":
+                case "88" |"89" | "209" | "215" | "400" | "489" | "497" | "703":
                     result_set.add(WeaknessClass.UNSAFE_DEFAULT_CONFIGURATION)
                 case _:
                     #_print_to_distribution_results(f"not in a weakness class: {cwe}")
@@ -163,6 +164,8 @@ def main():
     pivot_evaluations(os.path.join(output_path, "CodeLMSec_result.csv"))
     pivot_evaluations(os.path.join(output_path, "LLMSecEval_result.csv"))
     pivot_evaluations(os.path.join(output_path, "SecurityEval_result.csv"))
+    pivot_evaluations(os.path.join(output_path, "CyberSecEval_result.csv"))
+    pivot_evaluations(os.path.join(output_path, "SecCodePLT_result.csv"))
 
     print("Create distribution")
     _print_to_distribution_results("""Explanation of Weakness Classes:
@@ -192,6 +195,10 @@ OTHER:
     benchmark_distribution(os.path.join(output_path, "LLMSecEval_result_pivoted.csv"))
     _print_to_distribution_results("-"*45)
     benchmark_distribution(os.path.join(output_path, "SecurityEval_result_pivoted.csv"))
+    _print_to_distribution_results("-" * 45)
+    benchmark_distribution(os.path.join(output_path, "CyberSecEval_result_pivoted.csv"))
+    _print_to_distribution_results("-" * 45)
+    benchmark_distribution(os.path.join(output_path, "SecCodePLT_result_pivoted.csv"))
 
 
 if __name__ == "__main__":

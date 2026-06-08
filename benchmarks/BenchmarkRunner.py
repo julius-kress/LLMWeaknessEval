@@ -1,4 +1,5 @@
 import os
+import sys
 from abc import abstractmethod, ABC
 import time
 import csv
@@ -43,14 +44,14 @@ class BenchmarkRunner(ABC):
         os.makedirs(self.JSON_OUTPUT_DIR, exist_ok=True)
         os.makedirs(self.LOGS_DIR, exist_ok=True)
 
-    def request_llm(self, prompt: str, model: str, retries=3, delay=5) -> str:
+    def request_llm(self, prompt: str, model: str, retries=3, delay=3) -> str:
         """
         Send a prompt to the LLM with the instruction to generate only program code.
         :param prompt: The prompt to send to the LLM
         :param model: The model which should handle the prompt
         :param retries: Maximum retries
         :param delay: Delay after each retry
-        :return: The response of the LLM as a stirng
+        :return: The response of the LLM as a string
         """
         for attempt in range(retries):
             try:
@@ -155,6 +156,76 @@ class BenchmarkRunner(ABC):
         """
         self.save_log(f"Evaluating results from {self.JSON_OUTPUT_DIR}")
 
+        fields = [
+            "id",
+            "prompt",
+            "generated_code",
+            "model",
+            "bandit_evaluation",
+            "codeql_evaluation",
+        ]
+
+        csv.field_size_limit(sys.maxsize)
+        # Check which tasks already have been evaluated and only evaluate the missing tasks
+        existing = set()
+        if os.path.exists(self.RESULT_FILE):
+            with open(self.RESULT_FILE, "r", newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    existing.add((row["id"], row["model"]))
+
+        with open(self.RESULT_FILE, "a", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fields)
+
+            if os.path.getsize(self.RESULT_FILE) == 0:
+                writer.writeheader()
+
+            files = sorted(os.listdir(self.JSON_OUTPUT_DIR))
+            total = len(files)
+
+            # Process all files with generated code
+            for idx, json_file in enumerate(files, start=1):
+                if json_file.endswith(".json"):
+                    filepath = os.path.join(self.JSON_OUTPUT_DIR, json_file)
+                    with open(filepath, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+
+                record_id = data.get("id", "")
+                prompt = data.get("prompt", "")
+                generated_code = data.get("generated_code", "")
+                model = data.get("model", "")
+
+                # Check if current task already was evaluated
+                key = (str(record_id), model)
+
+                if key in existing:
+                    continue
+
+
+                self.save_log(f"{idx}/{total}: Running bandit for [{record_id}]")
+                bandit_evaluation = run_bandit(generated_code)
+
+                self.save_log(f"{idx}/{total}: Running CodeQL for [{record_id}]")
+                codeql_evaluation = run_codeql(generated_code)
+
+                writer.writerow({
+                    "id": record_id,
+                    "prompt": prompt,
+                    "generated_code": generated_code,
+                    "model": model,
+                    "bandit_evaluation": bandit_evaluation,
+                    "codeql_evaluation": codeql_evaluation,
+                })
+
+                # Mark current task as processed
+                existing.add(key)
+
+    def old_evaluate_results(self):
+        """
+        Evaluate the LLM generated code by running Bandit and CodeQL.
+        """
+        self.save_log(f"Evaluating results from {self.JSON_OUTPUT_DIR}")
+
         """
         # Once used to partly re evaluate results
         temp_codeql_eval = []
@@ -170,7 +241,7 @@ class BenchmarkRunner(ABC):
         """
 
         # Clear results
-        self.clear_result_file()
+        #self.clear_result_file()
 
         rows = []
 
