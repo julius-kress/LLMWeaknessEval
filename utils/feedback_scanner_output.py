@@ -1,4 +1,5 @@
 import csv
+import sys
 import os
 import re
 import time
@@ -121,8 +122,8 @@ def evaluate_feedback_results(input_csv_path: str, output_name: str = "evaluated
             codeql_eval = row["codeql_evaluation"]
             new_bandit_eval = row["new_bandit_evaluation"]
             new_codeql_eval = row["new_codeql_evaluation"]
-            print("Bandit Eval: " + bandit_eval)
-            print("CodeQL Eval: " + codeql_eval)
+            #print("Bandit Eval: " + bandit_eval)
+            #print("CodeQL Eval: " + codeql_eval)
 
             # extract CWEs before
             before_cwes = (
@@ -169,52 +170,82 @@ def feedback_scanner_output(input_csv_path: str, output_name: str = "feedback_re
     :return: The csv file from the input with additional columns: new_generated_code, new_bandit_evaluation, new_codeql_evaluation
     """
     input_path = Path(input_csv_path)
-
-    df = pd.read_csv(input_path)
-
-    new_rows = []
-
-    for i, (_, row) in enumerate(df.iterrows(), start=1):
-        print(f"[{i}/{len(df)}]")
-
-
-        # edit existing fields
-        task_id = row["id"]
-        prompt = row["prompt"]
-        generated_code = row["generated_code"]
-        model = row["model"]
-        bandit = row["bandit_evaluation"]
-        codeql = row["codeql_evaluation"]
-
-        print("Generating code...")
-        # create two new fields
-        new_generated_code = request_llm(prompt, generated_code, (bandit + "\n" + codeql), model)
-        print(new_generated_code)
-
-        print("Running bandit...")
-        new_bandit = run_bandit(new_generated_code)
-
-        print("Running codeql...")
-        new_codeql = run_codeql(new_generated_code)
-        print("Done!")
-        print("="*10)
-
-        new_rows.append({
-            "id": task_id,
-            "prompt": prompt,
-            "generated_code": generated_code,
-            "model": model,
-            "bandit_evaluation": bandit,
-            "codeql_evaluation": codeql,
-            "new_generated_code": new_generated_code,
-            "new_bandit_evaluation": new_bandit,
-            "new_codeql_evaluation": new_codeql,
-        })
-
-    new_df = pd.DataFrame(new_rows)
-
     output_path = input_path.parent / output_name
-    new_df.to_csv(output_path, index=False)
+
+    input_data = pd.read_csv(input_path)
+
+    output_fields = [
+        "id",
+        "prompt",
+        "generated_code",
+        "model",
+        "bandit_evaluation",
+        "codeql_evaluation",
+        "new_generated_code" ,
+        "new_bandit_evaluation",
+        "new_codeql_evaluation",
+    ]
+
+    csv.field_size_limit(sys.maxsize)
+
+    # Check which tasks already have been fed back and only evaluate the missing tasks
+    existing = set()
+    if os.path.exists(output_path):
+        with open(output_path, "r", newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                existing.add((row["id"], row["model"]))
+
+    with open(output_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=output_fields)
+
+        if os.path.getsize(output_path) == 0:
+            writer.writeheader()
+
+        # Feedback scanner results of cases where all models failed
+        for i, (_, row) in enumerate(input_data.iterrows(), start=1):
+            print(f"[{i}/{len(input_data)}]")
+
+            task_id = row["id"]
+            prompt = row["prompt"]
+            generated_code = row["generated_code"]
+            model = row["model"]
+            bandit = row["bandit_evaluation"]
+            codeql = row["codeql_evaluation"]
+
+            # Check if current task already was evaluated
+            key = (str(task_id), model)
+
+            if key in existing:
+                print(f"Skipping {i} (already done)")
+                continue
+
+            print(f"Generating code with {model}...")
+            new_generated_code = request_llm(prompt, generated_code, (bandit + "\n" + codeql), model)
+            # print(new_generated_code)
+
+            print("Running bandit...")
+            new_bandit = run_bandit(new_generated_code)
+
+            print("Running codeql...")
+            new_codeql = run_codeql(new_generated_code)
+            print("Done!")
+            print("=" * 10)
+
+            writer.writerow({
+                "id": task_id,
+                "prompt": prompt,
+                "generated_code": generated_code,
+                "model": model,
+                "bandit_evaluation": bandit,
+                "codeql_evaluation": codeql,
+                "new_generated_code": new_generated_code,
+                "new_bandit_evaluation": new_bandit,
+                "new_codeql_evaluation": new_codeql,
+            })
+
+            # Mark current task as processed
+            existing.add(key)
 
     print(f"CSV file saved to: {output_path}")
 
