@@ -266,7 +266,18 @@ def create_filtered_csv(folder_path: str, output_name: str = "filtered_results.c
         return
 
     # read and combine all CSV files
-    df_list = [pd.read_csv(file) for file in csv_files]
+    df_list = []
+    for file in csv_files:
+        df_tmp = pd.read_csv(file)
+
+        benchmark_name = file.name.removesuffix("_result.csv")
+
+        # Handle identical ids in different benchmarks
+        if benchmark_name == "CyberSecEval" or benchmark_name == "SecCodePLT":
+            df_tmp["id"] = benchmark_name + "_" + df_tmp["id"].astype(str)
+
+        df_list.append(df_tmp)
+
     df = pd.concat(df_list, ignore_index=True)
 
     # testcase is not considered only if BOTH tools report no issue
