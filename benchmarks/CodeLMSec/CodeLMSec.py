@@ -13,6 +13,7 @@ class CodeLMSec(BenchmarkRunner):
         self.BENCHMARK_ROOT = os.path.join(self.PROJECT_ROOT, "benchmarks", "CodeLMSec")
 
         self.init_folder_structure()
+        # Prompts I got from Anshul
         self.DATASET_FILE = os.path.join(self.BENCHMARK_ROOT, "prompt_code_pairs.json")
 
     def load_dataset(self):
