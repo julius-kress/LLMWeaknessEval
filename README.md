@@ -15,7 +15,7 @@ To run this project make sure to:
 1. Clone the project
 2. (Optional but recommended) Set up your virtual environment
 3. Install all requirements from `requirements.txt` e.g. with `pip install -r requirements.txt`
-4. Set your API-Key for the LLMs (i used [OpenRouter](https://openrouter.ai/)) like this: `export LLM_API_KEY="sk-or-v1-1234567890abcdef`
+4. Set your API-Key for the LLMs (I used [OpenRouter](https://openrouter.ai/)) like this: `export LLM_API_KEY="sk-or-v1-1234567890abcdef`
 5. Run `main.py` to run all benchmarks (may take some time)
 6. Run more scripts from `utils` to further process the results
 
@@ -45,6 +45,12 @@ These are some further processed results all based on the raw results. Because w
 - `feedback_results.csv` I fed back the found vulnerabilities to the models and told them to fix their code and these are the results
 - `evaluated_feedback.txt` A comparison of the detected CWEs before and after I fed back the scanner output to the models
 - `distribution_results.txt` A first attempt to find patterns and group all individual cases
+
+#### More analysis
+In files [analysis.ipynb](utils/analysis.ipynb) there is some general analysis by Parsa and in [manual_analysis](utils/manual_analysis.ipynb) is analysis regarding the vulnerability categories. It involves the results gathered from the manual tagging.
+
+#### Manual tagging
+I manually tagged all tasks where all models failed to generate secure code and uploaded them into [Manual results](evaluation_results/manual_checks).
 
 ### Utils
 This folder contains some python scripts to further process the collected data (prompts, generated code, detected vulnerabilities, ...)
