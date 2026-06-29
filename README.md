@@ -28,7 +28,7 @@ In `BenchmarkRunner.py` is an abstract base class which provide some sort of pyt
 The other subfolders contain implementations for each individual benchmark that is used. At this point thanks to a predecessor of this work [Anshul](https://github.com/breath24/Anshul) who also delt with the benchmarks and where I got the benchmarks from.
 
 ### Evaluation results
-Here are the results saved, I uploaded a run of the results I got and split it into raw and processed results.
+Here are the results saved, I uploaded a run of the results I got and split it into raw and processed results. I also uploaded presentation slides of the current results.
 #### [Raw results](./evaluation_results/raw_results)
 These are the raw results I got from sending prompts to the LLMs and checking the generated code for vulnerabilities.
 They consist of:
