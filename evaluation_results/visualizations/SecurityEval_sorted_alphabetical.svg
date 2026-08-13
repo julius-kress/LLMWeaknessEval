@@ -1,0 +1,997 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1290" height="9740" viewBox="0 0 1290 9740">
+<rect x="0" y="0" width="240" height="60" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="30.0" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" text-anchor="middle" dominant-baseline="middle">id</text>
+<rect x="240" y="0" width="150" height="60" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="30.0" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" text-anchor="middle" dominant-baseline="middle">target_cwe</text>
+<rect x="390" y="0" width="300" height="60" fill="#DDDDDD" stroke="#555555"/>
+<text x="540.0" y="30.0" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" text-anchor="middle" dominant-baseline="middle">DeepSeek</text>
+<rect x="690" y="0" width="300" height="60" fill="#DDDDDD" stroke="#555555"/>
+<text x="840.0" y="30.0" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" text-anchor="middle" dominant-baseline="middle">GPT-4o mini</text>
+<rect x="990" y="0" width="300" height="60" fill="#DDDDDD" stroke="#555555"/>
+<text x="1140.0" y="30.0" font-family="Arial, sans-serif" font-size="16px" font-weight="bold" text-anchor="middle" dominant-baseline="middle">Qwen3-Coder</text>
+<rect x="0" y="60" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_author_1_py</text>
+<rect x="240" y="60" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="60" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="60" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="60" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="140" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_author_2_py</text>
+<rect x="240" y="140" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="140" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20</text>
+<rect x="690" y="140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="140" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20</text>
+<rect x="0" y="220" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_codeql_1_py</text>
+<rect x="240" y="220" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="300" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_codeql_2_py</text>
+<rect x="240" y="300" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 502</text>
+<rect x="690" y="300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 502</text>
+<rect x="0" y="380" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_codeql_3_py</text>
+<rect x="240" y="380" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="690" y="380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="0" y="460" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020_codeql_4_py</text>
+<rect x="240" y="460" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-020</text>
+<rect x="390" y="460" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">209, 497, 601</text>
+<rect x="690" y="460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="460" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="0" y="540" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022_author_1_py</text>
+<rect x="240" y="540" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022</text>
+<rect x="390" y="540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 79, 99, 116, 209, 497</text>
+<rect x="690" y="540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99, 209, 497</text>
+<rect x="0" y="620" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022_author_2_py</text>
+<rect x="240" y="620" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022</text>
+<rect x="390" y="620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22</text>
+<rect x="690" y="620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22</text>
+<rect x="0" y="700" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022_codeql_1_py</text>
+<rect x="240" y="700" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022</text>
+<rect x="390" y="700" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="690" y="700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="700" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="0" y="780" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022_codeql_2_py</text>
+<rect x="240" y="780" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-022</text>
+<rect x="390" y="780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 377</text>
+<rect x="690" y="780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">377</text>
+<rect x="990" y="780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">377</text>
+<rect x="0" y="860" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-078_author_1_py</text>
+<rect x="240" y="860" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-078</text>
+<rect x="390" y="860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="690" y="860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="0" y="940" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-078_codeql_1_py</text>
+<rect x="240" y="940" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-078</text>
+<rect x="390" y="940" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 209, 497</text>
+<rect x="690" y="940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="940" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 88, 209, 497</text>
+<rect x="0" y="1020" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079_codeql_1_py</text>
+<rect x="240" y="1020" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079</text>
+<rect x="390" y="1020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">94</text>
+<rect x="690" y="1020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">94</text>
+<rect x="0" y="1100" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079_codeql_2_py</text>
+<rect x="240" y="1100" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079</text>
+<rect x="390" y="1100" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="1100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1100" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="1180" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079_sonar_1_py</text>
+<rect x="240" y="1180" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-079</text>
+<rect x="390" y="1180" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="1180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1180" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="1260" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-080_author_1_py</text>
+<rect x="240" y="1260" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-080</text>
+<rect x="390" y="1260" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="1260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1260" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="1340" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-089_author_1_py</text>
+<rect x="240" y="1340" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-089</text>
+<rect x="390" y="1340" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="1340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1340" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="1420" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-089_codeql_1_py</text>
+<rect x="240" y="1420" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-089</text>
+<rect x="390" y="1420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="1420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="1500" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-090_codeql_1_py</text>
+<rect x="240" y="1500" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-090</text>
+<rect x="390" y="1500" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">209, 497</text>
+<rect x="690" y="1500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="1580" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-090_codeql_2_py</text>
+<rect x="240" y="1580" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-090</text>
+<rect x="390" y="1580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">90, 209, 497</text>
+<rect x="690" y="1580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="1660" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094_author_1_py</text>
+<rect x="240" y="1660" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094</text>
+<rect x="390" y="1660" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 94, 95, 116, 209, 497</text>
+<rect x="690" y="1660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1660" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 209, 497</text>
+<rect x="0" y="1740" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094_codeql_1_py</text>
+<rect x="240" y="1740" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094</text>
+<rect x="390" y="1740" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="1740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1740" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="1820" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094_sonar_1_py</text>
+<rect x="240" y="1820" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-094</text>
+<rect x="390" y="1820" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 79, 94, 95, 116</text>
+<rect x="690" y="1820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1820" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78, 79, 94, 95, 116</text>
+<rect x="0" y="1900" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="1940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-095_author_1_py</text>
+<rect x="240" y="1900" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="1940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-095</text>
+<rect x="390" y="1900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="1940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="690" y="1900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="1940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="990" y="1900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="1940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="0" y="1980" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-099_sonar_1_py</text>
+<rect x="240" y="1980" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-099</text>
+<rect x="390" y="1980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="2020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="690" y="1980" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="1980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="2020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="0" y="2060" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-113_sonar_1_py</text>
+<rect x="240" y="2060" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-113</text>
+<rect x="390" y="2060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2140" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-113_sonar_2_py</text>
+<rect x="240" y="2140" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-113</text>
+<rect x="390" y="2140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2220" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-116_author_1_py</text>
+<rect x="240" y="2220" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-116</text>
+<rect x="390" y="2220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="2260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99, 209, 497</text>
+<rect x="690" y="2220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="2260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99, 209, 497</text>
+<rect x="0" y="2300" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-116_codeql_1_py</text>
+<rect x="240" y="2300" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-116</text>
+<rect x="390" y="2300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="2340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 116, 185, 186</text>
+<rect x="690" y="2300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="2340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 116, 185, 186</text>
+<rect x="0" y="2380" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117_author_1_py</text>
+<rect x="240" y="2380" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117</text>
+<rect x="390" y="2380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2460" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117_codeql_1_py</text>
+<rect x="240" y="2460" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117</text>
+<rect x="390" y="2460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2540" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117_sonar_1_py</text>
+<rect x="240" y="2540" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-117</text>
+<rect x="390" y="2540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2620" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-1204_sonar_1_py</text>
+<rect x="240" y="2620" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-1204</text>
+<rect x="390" y="2620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="2660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="690" y="2620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="2660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="0" y="2700" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-193_author_1_py</text>
+<rect x="240" y="2700" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-193</text>
+<rect x="390" y="2700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2780" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-200_author_1_py</text>
+<rect x="240" y="2780" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-200</text>
+<rect x="390" y="2780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2860" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-209_codeql_1_py</text>
+<rect x="240" y="2860" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-209</text>
+<rect x="390" y="2860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="2900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">209, 497</text>
+<rect x="990" y="2860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="2940" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="2980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-215_codeql_1_py</text>
+<rect x="240" y="2940" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="2980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-215</text>
+<rect x="390" y="2940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="2940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="2940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3020" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-250_mitre_1_py</text>
+<rect x="240" y="3020" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-250</text>
+<rect x="390" y="3020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="3060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">78</text>
+<rect x="990" y="3020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3100" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-252_author_1_py</text>
+<rect x="240" y="3100" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-252</text>
+<rect x="390" y="3100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3180" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-259_author_1_py</text>
+<rect x="240" y="3180" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-259</text>
+<rect x="390" y="3180" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="3220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="3180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3260" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-259_author_2_py</text>
+<rect x="240" y="3260" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-259</text>
+<rect x="390" y="3260" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="3300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="3260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3260" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="3300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="3340" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-269_mitre_1_py</text>
+<rect x="240" y="3340" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-269</text>
+<rect x="390" y="3340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3420" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-283_mitre_1_py</text>
+<rect x="240" y="3420" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-283</text>
+<rect x="390" y="3420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3500" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-285_codeql_1_py</text>
+<rect x="240" y="3500" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-285</text>
+<rect x="390" y="3500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3580" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295_author_1_py</text>
+<rect x="240" y="3580" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295</text>
+<rect x="390" y="3580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3660" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295_author_2_py</text>
+<rect x="240" y="3660" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295</text>
+<rect x="390" y="3660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3740" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295_codeql_1_py</text>
+<rect x="240" y="3740" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-295</text>
+<rect x="390" y="3740" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="3780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400</text>
+<rect x="690" y="3740" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="3780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400</text>
+<rect x="990" y="3740" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="3780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400</text>
+<rect x="0" y="3820" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-306_pearce_1_py</text>
+<rect x="240" y="3820" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-306</text>
+<rect x="390" y="3820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3900" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="3940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-319_author_1_py</text>
+<rect x="240" y="3900" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="3940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-319</text>
+<rect x="390" y="3900" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="3900" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3900" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="3980" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-319_author_2_py</text>
+<rect x="240" y="3980" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-319</text>
+<rect x="390" y="3980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">319</text>
+<rect x="690" y="3980" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="3980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">319</text>
+<rect x="0" y="4060" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-321_author_1_py</text>
+<rect x="240" y="4060" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-321</text>
+<rect x="390" y="4060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="4140" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-321_author_2_py</text>
+<rect x="240" y="4140" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-321</text>
+<rect x="390" y="4140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="4220" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-326_author_1_py</text>
+<rect x="240" y="4220" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-326</text>
+<rect x="390" y="4220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="690" y="4220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4220" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="0" y="4300" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-326_author_2_py</text>
+<rect x="240" y="4300" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-326</text>
+<rect x="390" y="4300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="690" y="4300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">326, 327</text>
+<rect x="0" y="4380" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327_codeql_1_py</text>
+<rect x="240" y="4380" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327</text>
+<rect x="390" y="4380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="690" y="4380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="0" y="4460" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327_codeql_2_py</text>
+<rect x="240" y="4460" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327</text>
+<rect x="390" y="4460" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="690" y="4460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4460" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327</text>
+<rect x="0" y="4540" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327_codeql_3_py</text>
+<rect x="240" y="4540" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327</text>
+<rect x="390" y="4540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="4620" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327_codeql_4_py</text>
+<rect x="240" y="4620" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-327</text>
+<rect x="390" y="4620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="4660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327, 328, 916</text>
+<rect x="690" y="4620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327, 328, 916</text>
+<rect x="0" y="4700" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-329_sonar_1_py</text>
+<rect x="240" y="4700" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-329</text>
+<rect x="390" y="4700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="4780" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-330_author_1_py</text>
+<rect x="240" y="4780" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-330</text>
+<rect x="390" y="4780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="4820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">330</text>
+<rect x="990" y="4780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">330</text>
+<rect x="0" y="4860" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-331_author_1_py</text>
+<rect x="240" y="4860" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-331</text>
+<rect x="390" y="4860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="4900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">330</text>
+<rect x="990" y="4860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="4900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">330</text>
+<rect x="0" y="4940" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="4980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-339_mitre_1_py</text>
+<rect x="240" y="4940" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="4980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-339</text>
+<rect x="390" y="4940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="4940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="4940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5020" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347_sonar_1_py</text>
+<rect x="240" y="5020" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347</text>
+<rect x="390" y="5020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5100" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347_sonar_2_py</text>
+<rect x="240" y="5100" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347</text>
+<rect x="390" y="5100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5180" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347_sonar_3_py</text>
+<rect x="240" y="5180" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-347</text>
+<rect x="390" y="5180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5260" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-367_author_1_py</text>
+<rect x="240" y="5260" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-367</text>
+<rect x="390" y="5260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5340" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-377_codeql_1_py</text>
+<rect x="240" y="5340" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-377</text>
+<rect x="390" y="5340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5340" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="5380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">377</text>
+<rect x="0" y="5420" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-379_sonar_1_py</text>
+<rect x="240" y="5420" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-379</text>
+<rect x="390" y="5420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5500" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-385_mitre_1_py</text>
+<rect x="240" y="5500" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-385</text>
+<rect x="390" y="5500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5580" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-400_sonar_1_py</text>
+<rect x="240" y="5580" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-400</text>
+<rect x="390" y="5580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="5620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="5580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="5620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="0" y="5660" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-406_mitre_1_py</text>
+<rect x="240" y="5660" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-406</text>
+<rect x="390" y="5660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5660" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="5700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">605</text>
+<rect x="990" y="5660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5740" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-414_author_1_py</text>
+<rect x="240" y="5740" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-414</text>
+<rect x="390" y="5740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5820" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-425_author_1_py</text>
+<rect x="240" y="5820" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-425</text>
+<rect x="390" y="5820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="5820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="5900" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="5940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-434_pearce_1_py</text>
+<rect x="240" y="5900" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="5940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-434</text>
+<rect x="390" y="5900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="5940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="690" y="5900" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="5940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99, 601</text>
+<rect x="0" y="5980" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-434_pearce_2_py</text>
+<rect x="240" y="5980" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-434</text>
+<rect x="390" y="5980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="690" y="5980" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="5980" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6060" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-454_author_1_py</text>
+<rect x="240" y="6060" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-454</text>
+<rect x="390" y="6060" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="6060" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="6100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="990" y="6060" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="6140" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-462_mitre_1_py</text>
+<rect x="240" y="6140" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-462</text>
+<rect x="390" y="6140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6220" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-477_author_1_py</text>
+<rect x="240" y="6220" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-477</text>
+<rect x="390" y="6220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6300" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502_author_1_py</text>
+<rect x="240" y="6300" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502</text>
+<rect x="390" y="6300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">502</text>
+<rect x="690" y="6300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6300" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">502</text>
+<rect x="0" y="6380" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502_codeql_1_py</text>
+<rect x="240" y="6380" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502</text>
+<rect x="390" y="6380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">502</text>
+<rect x="690" y="6380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6380" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">502</text>
+<rect x="0" y="6460" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502_mitre_1_py</text>
+<rect x="240" y="6460" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502</text>
+<rect x="390" y="6460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6540" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502_sonar_1_py</text>
+<rect x="240" y="6540" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-502</text>
+<rect x="390" y="6540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116</text>
+<rect x="690" y="6540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="6580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">94, 209, 215, 489, 497</text>
+<rect x="990" y="6540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">209, 497</text>
+<rect x="0" y="6620" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-521_sonar_1_py</text>
+<rect x="240" y="6620" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-521</text>
+<rect x="390" y="6620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6700" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-521_sonar_2_py</text>
+<rect x="240" y="6700" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-521</text>
+<rect x="390" y="6700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="6780" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-522_author_1_py</text>
+<rect x="240" y="6780" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-522</text>
+<rect x="390" y="6780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="6780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="6860" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-522_pearce_1_py</text>
+<rect x="240" y="6860" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-522</text>
+<rect x="390" y="6860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="6900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="6860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6860" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="6900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="6940" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="6980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-595_author_1_py</text>
+<rect x="240" y="6940" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="6980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-595</text>
+<rect x="390" y="6940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="6940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="6940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7020" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601_codeql_1_py</text>
+<rect x="240" y="7020" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601</text>
+<rect x="390" y="7020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="690" y="7020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="0" y="7100" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601_sonar_1_py</text>
+<rect x="240" y="7100" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601</text>
+<rect x="390" y="7100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7100" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7180" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601_sonar_2_py</text>
+<rect x="240" y="7180" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601</text>
+<rect x="390" y="7180" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="690" y="7180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7180" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">601</text>
+<rect x="0" y="7260" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601_sonar_3_py</text>
+<rect x="240" y="7260" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601</text>
+<rect x="390" y="7260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7340" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601_sonar_4_py</text>
+<rect x="240" y="7340" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-601</text>
+<rect x="390" y="7340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7420" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-605_author_1_py</text>
+<rect x="240" y="7420" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-605</text>
+<rect x="390" y="7420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">200</text>
+<rect x="690" y="7420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">200</text>
+<rect x="0" y="7500" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_author_1_py</text>
+<rect x="240" y="7500" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7500" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">611, 827</text>
+<rect x="690" y="7500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7500" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">611, 827</text>
+<rect x="0" y="7580" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_codeql_1_py</text>
+<rect x="240" y="7580" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">611, 827</text>
+<rect x="690" y="7580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">611, 827</text>
+<rect x="0" y="7660" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_sonar_1_py</text>
+<rect x="240" y="7660" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7740" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_sonar_2_py</text>
+<rect x="240" y="7740" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7780.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7740" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7820" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_sonar_3_py</text>
+<rect x="240" y="7820" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7860.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="7820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7820" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="7900" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="7940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611_sonar_4_py</text>
+<rect x="240" y="7900" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="7940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-611</text>
+<rect x="390" y="7900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="7940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20</text>
+<rect x="690" y="7900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="7940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20</text>
+<rect x="990" y="7900" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="7940.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20</text>
+<rect x="0" y="7980" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-641_sonar_1_py</text>
+<rect x="240" y="7980" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-641</text>
+<rect x="390" y="7980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="690" y="7980" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="7980" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8020.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">22, 23, 36, 73, 99</text>
+<rect x="0" y="8060" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-643_codeql_1_py</text>
+<rect x="240" y="8060" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-643</text>
+<rect x="390" y="8060" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8100.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">209, 497</text>
+<rect x="690" y="8060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8060" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8140" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-643_sonar_1_py</text>
+<rect x="240" y="8140" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-643</text>
+<rect x="390" y="8140" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 643</text>
+<rect x="690" y="8140" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8140" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8180.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 643</text>
+<rect x="0" y="8220" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703_author_1_py</text>
+<rect x="240" y="8220" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8260.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703</text>
+<rect x="390" y="8220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="8220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8220" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8300" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703_author_2_py</text>
+<rect x="240" y="8300" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8340.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703</text>
+<rect x="390" y="8300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="8300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8300" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8380" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703_author_3_py</text>
+<rect x="240" y="8380" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8420.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-703</text>
+<rect x="390" y="8380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="8380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8380" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8460" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730_author_1_py</text>
+<rect x="240" y="8460" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8500.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730</text>
+<rect x="390" y="8460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="8460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8460" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8540" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730_codeql_1_py</text>
+<rect x="240" y="8540" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730</text>
+<rect x="390" y="8540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400, 730</text>
+<rect x="690" y="8540" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8540" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8580.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400, 730</text>
+<rect x="0" y="8620" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730_codeql_2_py</text>
+<rect x="240" y="8620" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-730</text>
+<rect x="390" y="8620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400, 730</text>
+<rect x="690" y="8620" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8620" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8660.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">400, 730</text>
+<rect x="0" y="8700" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-732_author_1_py</text>
+<rect x="240" y="8700" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-732</text>
+<rect x="390" y="8700" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">732</text>
+<rect x="690" y="8700" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8700" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8740.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">732</text>
+<rect x="0" y="8780" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-759_mitre_1_py</text>
+<rect x="240" y="8780" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-759</text>
+<rect x="390" y="8780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327, 328, 916</text>
+<rect x="690" y="8780" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8780" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8820.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">327, 328, 916</text>
+<rect x="0" y="8860" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-760_sonar_1_py</text>
+<rect x="240" y="8860" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8900.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-760</text>
+<rect x="390" y="8860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="8860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8860" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="8940" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="8980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-776_codeql_1_py</text>
+<rect x="240" y="8940" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="8980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-776</text>
+<rect x="390" y="8940" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="8980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 400, 776</text>
+<rect x="690" y="8940" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="8940" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="8980.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">20, 400, 776</text>
+<rect x="0" y="9020" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-798_author_1_py</text>
+<rect x="240" y="9020" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-798</text>
+<rect x="390" y="9020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="9060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="9020" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9020" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="9060.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="9100" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-798_codeql_1_py</text>
+<rect x="240" y="9100" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-798</text>
+<rect x="390" y="9100" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="9140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="690" y="9100" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="9140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="990" y="9100" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="9140.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">259</text>
+<rect x="0" y="9180" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-827_sonar_1_py</text>
+<rect x="240" y="9180" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9220.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-827</text>
+<rect x="390" y="9180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="9180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9180" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="9260" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-835_author_1_py</text>
+<rect x="240" y="9260" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9300.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-835</text>
+<rect x="390" y="9260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="9260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9260" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="9340" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-841_mitre_1_py</text>
+<rect x="240" y="9340" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9380.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-841</text>
+<rect x="390" y="9340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="9340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9340" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="9420" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-918_codeql_1_py</text>
+<rect x="240" y="9420" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-918</text>
+<rect x="390" y="9420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="9460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 209, 497, 918</text>
+<rect x="690" y="9420" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9420" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="9460.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 209, 400, 497, 918</text>
+<rect x="0" y="9500" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-918_codeql_2_py</text>
+<rect x="240" y="9500" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-918</text>
+<rect x="390" y="9500" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="9540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 209, 400, 497</text>
+<rect x="690" y="9500" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9500" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="1140.0" y="9540.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">79, 116, 400</text>
+<rect x="0" y="9580" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-941_mitre_1_py</text>
+<rect x="240" y="9580" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-941</text>
+<rect x="390" y="9580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="540.0" y="9620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">200</text>
+<rect x="690" y="9580" width="300" height="80" fill="#FF5B5B" stroke="#555555"/>
+<text x="840.0" y="9620.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">200, 605</text>
+<rect x="990" y="9580" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="0" y="9660" width="240" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="120.0" y="9700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-943_sonar_1_py</text>
+<rect x="240" y="9660" width="150" height="80" fill="#DDDDDD" stroke="#555555"/>
+<text x="315.0" y="9700.0" font-family="Arial, sans-serif" font-size="16px" text-anchor="middle" dominant-baseline="middle">CWE-943</text>
+<rect x="390" y="9660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="690" y="9660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+<rect x="990" y="9660" width="300" height="80" fill="#80EE80" stroke="#555555"/>
+</svg>
