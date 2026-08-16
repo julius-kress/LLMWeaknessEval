@@ -29,6 +29,10 @@ def generate_table(csv_path, output_path, flag_sorted:bool = False):
                    .replace("deepseek/deepseek-v3.2", "DeepSeek")
                    .replace("openai/gpt-4o-mini", "GPT-4o mini")
                    .replace("qwen/qwen3-coder-30b-a3b-instruct", "Qwen3-Coder"))
+
+    if csv_path.endswith("LLMSecEval_result.csv"):
+        df["id"] = df["id"].str.partition(":")[0].str.strip()
+
     models = df["model"].drop_duplicates().tolist()
 
     ids = df["id"].drop_duplicates().tolist()
