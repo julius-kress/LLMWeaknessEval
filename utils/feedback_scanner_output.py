@@ -16,6 +16,7 @@ client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
 )
 
+csv.field_size_limit(sys.maxsize)
 
 def request_llm(prompt: str, old_code: str, vulnerabilities: str, model: str, retries=3, delay=5) -> str:
     """
@@ -114,8 +115,34 @@ def evaluate_feedback_results(input_csv_path: str, output_name: str = "evaluated
     before_counter = Counter()
     after_counter = Counter()
 
+    unique_before_counter = Counter()
+    unique_after_counter = Counter()
+
+    resolved_cwes_counter = Counter()
+    unsolved_cwes_counter = Counter()
+    new_introduced_cwes_counter = Counter()
+
+    rows = []
+
     with open(csv_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
+
+        fieldnames = reader.fieldnames.copy()
+
+        if "cwes_before" not in fieldnames:
+            fieldnames.append("cwes_before")
+
+        if "cwes_after" not in fieldnames:
+            fieldnames.append("cwes_after")
+
+        if "cwes_resolved" not in fieldnames:
+            fieldnames.append("cwes_resolved")
+
+        if "cwes_unsolved" not in fieldnames:
+            fieldnames.append("cwes_unsolved")
+
+        if "new_introduced_cwes" not in fieldnames:
+            fieldnames.append("new_introduced_cwes")
 
         for row in reader:
             bandit_eval = row["bandit_evaluation"]
@@ -126,27 +153,66 @@ def evaluate_feedback_results(input_csv_path: str, output_name: str = "evaluated
             #print("CodeQL Eval: " + codeql_eval)
 
             # extract CWEs before
-            before_cwes = (
-                    extract_cwe_number(preprocess_bandit(bandit_eval))
-                    + extract_cwe_number(codeql_eval)
-            )
+            before_bandit = extract_cwe_number(preprocess_bandit(bandit_eval))
+            before_codeql = extract_cwe_number(codeql_eval)
+            before_cwes = (before_bandit + before_codeql)
+            # Union of cwes
+
+            set_of_cwes_before = list(set(before_bandit) | set(before_codeql))
+            unique_before_counter.update(set_of_cwes_before)
+            row["cwes_before"] = "\n".join(set_of_cwes_before)
 
             # extract CWEs after
-            after_cwes = (
-                    extract_cwe_number(preprocess_bandit(new_bandit_eval))
-                    + extract_cwe_number(new_codeql_eval)
-            )
+            after_bandit = extract_cwe_number(preprocess_bandit(new_bandit_eval))
+            after_codeql = extract_cwe_number(new_codeql_eval)
+            after_cwes = (after_bandit + after_codeql)
+            # Union of cwes
+            set_of_cwes_after = list(set(after_bandit) | set(after_codeql))
+            unique_after_counter.update(set_of_cwes_after)
+            row["cwes_after"] = "\n".join(set_of_cwes_after)
+
+            cwes_resolved = set(set_of_cwes_before) - set(set_of_cwes_after)
+            cwes_unsolved = set(set_of_cwes_before) & set(set_of_cwes_after)
+            new_introduced_cwes = set(set_of_cwes_after) - set(set_of_cwes_before)
+            row["cwes_resolved"] = "\n".join(cwes_resolved)
+            row["cwes_unsolved"] = "\n".join(cwes_unsolved)
+            row["new_introduced_cwes"] = "\n".join(new_introduced_cwes)
+            rows.append(row)
 
             before_counter.update(before_cwes)
             after_counter.update(after_cwes)
 
+            resolved_cwes_counter.update(cwes_resolved)
+            unsolved_cwes_counter.update(cwes_unsolved)
+            new_introduced_cwes_counter.update(new_introduced_cwes)
+
+    # Update csv file
+    with open(csv_path, "w", newline="", encoding="utf-8") as outfile:
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    total_unique_before = sum(unique_before_counter.values())
+    total_unique_after = sum(unique_after_counter.values())
+
+    total_unique_lines = [f"Overall CWEs (unique CWEs per task): {total_unique_before}",
+                    f"After scanner feedback: {total_unique_after}",
+                    "",
+                    "Total unique per task appearing CWEs before vs after feeding back scanner results to the models:"]
+
+    for cwe, count_before in unique_before_counter.most_common():
+        count_after = unique_after_counter.get(cwe, 0)
+        total_unique_lines.append(f"CWE-{cwe}: {count_before} -> {count_after}")
+
+    total_unique_text = "\n".join(total_unique_lines)
+
     total_before = sum(before_counter.values())
     total_after = sum(after_counter.values())
 
-    output_lines = [f"Overall CWEs: {total_before}",
+    output_lines = [f"Overall CWEs (possibly multiple of same CWE per task): {total_before}",
                     f"After scanner feedback: {total_after}",
                     "",
-                    "Appearing CWEs before vs after feeding back scanner results to the models:"]
+                    "Total appearing CWEs before vs after feeding back scanner results to the models:"]
 
     for cwe, count_before in before_counter.most_common():
         count_after = after_counter.get(cwe, 0)
@@ -154,9 +220,30 @@ def evaluate_feedback_results(input_csv_path: str, output_name: str = "evaluated
 
     output_text = "\n".join(output_lines)
 
+    resolved_cwes_text = "Resolved CWEs:\n"
+    for cwe, count in resolved_cwes_counter.most_common():
+        resolved_cwes_text += f"CWE-{cwe}: {count}\n"
+
+    unsolved_cwes_text = "Unsolved CWEs:\n"
+    for cwe, count in unsolved_cwes_counter.most_common():
+        unsolved_cwes_text += f"CWE-{cwe}: {count}\n"
+
+    new_cwes_introduced_text = "Newly introduced CWEs:\n"
+    for cwe, count in new_introduced_cwes_counter.most_common():
+        new_cwes_introduced_text += f"CWE-{cwe}: {count}\n"
+
     output_file = csv_path.parent / output_name
     with open(output_file, "w", encoding="utf-8") as f:
+        f.write(total_unique_text)
+        f.write("\n\n")
+        f.write(resolved_cwes_text)
+        f.write("\n")
+        f.write(unsolved_cwes_text)
+        f.write("\n")
+        f.write(new_cwes_introduced_text)
+        f.write("\n\n")
         f.write(output_text)
+
 
     print(f"Analysis written to {output_file}")
 
@@ -297,7 +384,7 @@ def create_filtered_csv(folder_path: str, output_name: str = "filtered_results.c
 
 
 def main():
-    output_path = os.path.abspath(os.path.join(__file__, "..", "..", "evaluation_results"))
+    output_path = os.path.abspath(os.path.join(__file__, "..", "..", "evaluation_results", "processed_results"))
     create_filtered_csv(output_path)
     feedback_scanner_output(os.path.join(output_path, "filtered_results.csv"))
     evaluate_feedback_results(os.path.join(output_path, "feedback_results.csv"))
