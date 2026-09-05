@@ -75,7 +75,9 @@ def count_cwes_per_benchmark(folder_path):
 
     print(result.to_string(index=False))
 
-
+    for file in counter_dict:
+        total = result[file].replace("-", 0).sum()
+        print(f"{file}: {total}")
 
 
 def main():

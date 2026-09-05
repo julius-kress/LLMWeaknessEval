@@ -202,7 +202,8 @@ def evaluate_feedback_results(input_csv_path: str, output_name: str = "evaluated
 
     for cwe, count_before in unique_before_counter.most_common():
         count_after = unique_after_counter.get(cwe, 0)
-        total_unique_lines.append(f"CWE-{cwe}: {count_before} -> {count_after}")
+        fix_percentage = round((count_before - count_after) / count_before * 100, 1)
+        total_unique_lines.append(f"CWE-{cwe}: {count_before} -> {count_after} : {fix_percentage}%")
 
     total_unique_text = "\n".join(total_unique_lines)
 
