@@ -1,0 +1,164 @@
+Overall CWEs (unique CWEs per task): 1071
+After scanner feedback: 260
+
+Total unique per task appearing CWEs before vs after feeding back scanner results to the models:
+CWE-78: 216 -> 89 : 58.8%
+CWE-94: 67 -> 0 : 100.0%
+CWE-259: 63 -> 7 : 88.9%
+CWE-116: 63 -> 0 : 100.0%
+CWE-215: 58 -> 0 : 100.0%
+CWE-489: 58 -> 0 : 100.0%
+CWE-79: 53 -> 0 : 100.0%
+CWE-22: 48 -> 31 : 35.4%
+CWE-20: 39 -> 10 : 74.4%
+CWE-209: 38 -> 5 : 86.8%
+CWE-497: 38 -> 5 : 86.8%
+CWE-601: 34 -> 27 : 20.6%
+CWE-703: 32 -> 2 : 93.8%
+CWE-327: 28 -> 8 : 71.4%
+CWE-502: 27 -> 6 : 77.8%
+CWE-330: 20 -> 0 : 100.0%
+CWE-89: 19 -> 14 : 26.3%
+CWE-400: 15 -> 4 : 73.3%
+CWE-328: 14 -> 8 : 42.9%
+CWE-916: 14 -> 8 : 42.9%
+CWE-23: 13 -> 4 : 69.2%
+CWE-73: 13 -> 4 : 69.2%
+CWE-99: 13 -> 4 : 69.2%
+CWE-36: 13 -> 4 : 69.2%
+CWE-88: 13 -> 2 : 84.6%
+CWE-605: 11 -> 0 : 100.0%
+CWE-95: 9 -> 0 : 100.0%
+CWE-359: 7 -> 4 : 42.9%
+CWE-312: 7 -> 4 : 42.9%
+CWE-377: 6 -> 0 : 100.0%
+CWE-532: 5 -> 4 : 20.0%
+CWE-730: 5 -> 4 : 20.0%
+CWE-315: 2 -> 0 : 100.0%
+CWE-1333: 2 -> 2 : 0.0%
+CWE-319: 2 -> 0 : 100.0%
+CWE-200: 2 -> 0 : 100.0%
+CWE-185: 1 -> 0 : 100.0%
+CWE-186: 1 -> 0 : 100.0%
+CWE-732: 1 -> 0 : 100.0%
+CWE-918: 1 -> 0 : 100.0%
+
+Resolved CWEs:
+CWE-78: 127
+CWE-94: 67
+CWE-116: 63
+CWE-259: 58
+CWE-215: 58
+CWE-489: 58
+CWE-79: 53
+CWE-209: 38
+CWE-497: 38
+CWE-703: 32
+CWE-20: 29
+CWE-327: 28
+CWE-502: 21
+CWE-330: 20
+CWE-22: 19
+CWE-328: 14
+CWE-916: 14
+CWE-400: 13
+CWE-605: 11
+CWE-88: 11
+CWE-23: 9
+CWE-73: 9
+CWE-99: 9
+CWE-36: 9
+CWE-95: 9
+CWE-601: 7
+CWE-377: 6
+CWE-89: 5
+CWE-359: 3
+CWE-312: 3
+CWE-730: 3
+CWE-315: 2
+CWE-1333: 2
+CWE-319: 2
+CWE-200: 2
+CWE-532: 1
+CWE-185: 1
+CWE-186: 1
+CWE-732: 1
+CWE-918: 1
+
+Unsolved CWEs:
+CWE-78: 89
+CWE-22: 29
+CWE-601: 27
+CWE-89: 14
+CWE-20: 10
+CWE-502: 6
+CWE-259: 5
+CWE-359: 4
+CWE-532: 4
+CWE-312: 4
+CWE-73: 4
+CWE-99: 4
+CWE-23: 4
+CWE-36: 4
+CWE-88: 2
+CWE-400: 2
+CWE-730: 2
+
+Newly introduced CWEs:
+CWE-328: 8
+CWE-916: 8
+CWE-327: 8
+CWE-209: 5
+CWE-497: 5
+CWE-703: 2
+CWE-259: 2
+CWE-400: 2
+CWE-1333: 2
+CWE-730: 2
+CWE-22: 2
+
+
+Overall CWEs (possibly multiple of same CWE per task): 1460
+After scanner feedback: 375
+
+Total appearing CWEs before vs after feeding back scanner results to the models:
+CWE-78: 437 -> 185
+CWE-703: 84 -> 2
+CWE-259: 81 -> 10
+CWE-94: 68 -> 0
+CWE-502: 63 -> 10
+CWE-116: 63 -> 0
+CWE-215: 58 -> 0
+CWE-489: 58 -> 0
+CWE-20: 57 -> 10
+CWE-22: 57 -> 36
+CWE-79: 53 -> 0
+CWE-209: 38 -> 5
+CWE-497: 38 -> 5
+CWE-330: 34 -> 0
+CWE-327: 34 -> 8
+CWE-601: 34 -> 27
+CWE-89: 28 -> 21
+CWE-400: 18 -> 4
+CWE-328: 14 -> 8
+CWE-916: 14 -> 8
+CWE-23: 13 -> 4
+CWE-36: 13 -> 4
+CWE-73: 13 -> 4
+CWE-99: 13 -> 4
+CWE-88: 13 -> 2
+CWE-605: 11 -> 0
+CWE-95: 9 -> 0
+CWE-312: 7 -> 4
+CWE-359: 7 -> 4
+CWE-377: 7 -> 0
+CWE-532: 5 -> 4
+CWE-730: 5 -> 4
+CWE-319: 3 -> 0
+CWE-315: 2 -> 0
+CWE-1333: 2 -> 2
+CWE-200: 2 -> 0
+CWE-185: 1 -> 0
+CWE-186: 1 -> 0
+CWE-732: 1 -> 0
+CWE-918: 1 -> 0
