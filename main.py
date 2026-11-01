@@ -18,6 +18,9 @@ class Models(Enum):
     QWEN = "qwen/qwen3-coder-30b-a3b-instruct"
     DEEPSEEK = "deepseek/deepseek-v3.2"
     GPT = "openai/gpt-4o-mini"
+    CLAUDE = "anthropic/claude-sonnet-5"
+    MOONSHOTAI = "moonshotai/kimi-k2.7-code"
+    ZAI = "z-ai/glm-5.3"
 
 class Main:
     def __init__(self):
@@ -48,17 +51,13 @@ class Main:
         print("Starting LLM Weakness Evaluation...")
 
         # Generate program code for each benchmark and evaluate it with the vulnerability scanners.
-        """
         self.generate_and_evaluate(self.security_eval)
         self.generate_and_evaluate(self.llm_sec_eval)
         self.generate_and_evaluate(self.code_lm_sec)
         self.generate_and_evaluate(self.cyber_sec_eval)
         self.generate_and_evaluate(self.sec_code_plt)
-        """
-
 
         # Further process the results
-
         self.process_results(self.security_eval)
         self.process_results(self.llm_sec_eval)
         self.process_results(self.code_lm_sec)
@@ -72,9 +71,17 @@ class Main:
         Generate code for each benchmark and model; evaluate it after.
         :param benchmark: The benchmark which should be run.
         """
+        """
+        # Run with specific model
         benchmark.generate_code(Models.QWEN.value)
         benchmark.generate_code(Models.DEEPSEEK.value)
         benchmark.generate_code(Models.GPT.value)
+        benchmark.generate_code(Models.CLAUDE.value)
+        """
+
+        # Run with all models
+        for model in Models:
+            benchmark.generate_code(model.value)
 
         benchmark.evaluate_results()
 
